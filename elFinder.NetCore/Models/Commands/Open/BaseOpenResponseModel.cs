@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace elFinder.NetCore.Models.Commands
@@ -14,15 +15,19 @@ namespace elFinder.NetCore.Models.Commands
         }
 
         [JsonPropertyName("cwd")]
+        [JsonProperty("cwd")]
         public DirectoryModel CurrentWorkingDirectory { get; protected set; }
 
         [JsonPropertyName("debug")]
+        [JsonProperty("debug")]
         public DebugResponseModel Debug => debug;
 
         [JsonPropertyName("files")]
+        [JsonProperty("files")]
         public List<object> Files { get; protected set; }
 
-        [JsonPropertyName("options")]
+        [JsonPropertyName("files")]
+        [JsonProperty("files")]
         public Options Options { get; protected set; }
     }
 }

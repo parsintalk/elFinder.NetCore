@@ -1,0 +1,9 @@
+add support for json.net at BaseOpenResponseModel:
+
+        [JsonPropertyName("cwd")]
+to 
+        [JsonPropertyName("cwd")]
+        [JsonProperty("cwd")]
+
+and etc...
+
