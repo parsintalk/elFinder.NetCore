@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Newtonsoft.Json;
+using System.Drawing;
 using System.Text.Json.Serialization;
 
 namespace elFinder.NetCore.Models.Commands
@@ -16,6 +17,7 @@ namespace elFinder.NetCore.Models.Commands
         }
 
         [JsonPropertyName("dim")]
+        [JsonProperty("dim")]
         public string Dimension { get; set; }
     }
 }

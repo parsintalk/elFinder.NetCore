@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace elFinder.NetCore.Models.Commands
@@ -6,9 +7,11 @@ namespace elFinder.NetCore.Models.Commands
     public class AddResponseModel
     {
         [JsonPropertyName("added")]
+        [JsonProperty("added")]
         public List<object> Added { get; protected set; }
 
         [JsonPropertyName("hashes")]
+        [JsonProperty("hashes")]
         public Dictionary<string, string> Hashes { get; protected set; }
 
         public AddResponseModel()

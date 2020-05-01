@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace elFinder.NetCore.Models.Commands
@@ -11,6 +12,7 @@ namespace elFinder.NetCore.Models.Commands
         }
 
         [JsonPropertyName("removed")]
+        [JsonProperty("removed")]
         public List<string> Removed { get; }
     }
 }

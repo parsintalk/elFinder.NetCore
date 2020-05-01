@@ -26,8 +26,8 @@ namespace elFinder.NetCore.Models.Commands
         [JsonProperty("files")]
         public List<object> Files { get; protected set; }
 
-        [JsonPropertyName("files")]
-        [JsonProperty("files")]
+        [JsonPropertyName("options")]
+        [JsonProperty("options")]
         public Options Options { get; protected set; }
     }
 }

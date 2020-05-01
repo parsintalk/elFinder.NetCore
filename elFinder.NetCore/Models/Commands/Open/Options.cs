@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace elFinder.NetCore.Models.Commands
@@ -6,12 +7,15 @@ namespace elFinder.NetCore.Models.Commands
     public class Archive
     {
         [JsonPropertyName("create")]
+        [JsonProperty("create")]
         public IEnumerable<string> Create { get; set; }
 
         [JsonPropertyName("extract")]
+        [JsonProperty("extract")]
         public IEnumerable<string> Extract { get; set; }
 
         [JsonPropertyName("createext")]
+        [JsonProperty("createext")]
         public IDictionary<string, string> CreateExt { get; set; }
     }
 
@@ -43,33 +47,43 @@ namespace elFinder.NetCore.Models.Commands
         }
 
         [JsonPropertyName("archivers")]
+        [JsonProperty("archivers")]
         public Archive Archivers { get; set; }
 
         [JsonPropertyName("disabled")]
+        [JsonProperty("disabled")]
         public IEnumerable<string> Disabled => disabled;
 
         [JsonPropertyName("copyOverwrite")]
+        [JsonProperty("copyOverwrite")]
         public byte IsCopyOverwrite => 1;
 
         [JsonPropertyName("path")]
+        [JsonProperty("path")]
         public string Path { get; set; }
 
         [JsonPropertyName("separator")]
+        [JsonProperty("separator")]
         public char Separator => '/';
 
         [JsonPropertyName("tmbUrl")]
+        [JsonProperty("tmbUrl")]
         public string ThumbnailsUrl { get; set; }
 
         [JsonPropertyName("trashHash")]
+        [JsonProperty("trashHash")]
         public string TrashHash => string.Empty;
 
         [JsonPropertyName("uploadMaxConn")]
+        [JsonProperty("uploadMaxConn")]
         public int UploadMaxConnections => -1;
 
         [JsonPropertyName("uploadMaxSize")]
+        [JsonProperty("uploadMaxSize")]
         public string UploadMaxSize { get; set; }
 
         [JsonPropertyName("url")]
+        [JsonProperty("url")]
         public string Url { get; set; }
     }
 }
